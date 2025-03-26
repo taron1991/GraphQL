@@ -38,6 +38,16 @@ public class GraphController {
         return book1;
     }
 
+    @MutationMapping
+    public Boolean deleteBookById(@Argument Long id) {
+        if (!bookRepository.findById(id).isPresent()) {
+            throw new RuntimeException();
+        } else {
+            bookRepository.deleteById(id);
+        }
+        return true;
+    }
+
     record BookInput(String title, String publisher, Long authorId){
 
     }
