@@ -1,0 +1,24 @@
+spring:
+  application:
+    name:
+     GraphQLProject
+
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: westside
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+
+  graphql:
+    graphiql:
+      enabled: true
+    schema:
+      printer:
+        enabled: true
