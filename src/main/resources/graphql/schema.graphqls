@@ -1,11 +1,19 @@
 type Query{
     authors: [Author]
     authorById(id: ID!): Author
+    profile: String
 
 }
 type Mutation{
     addBook(book: BookInput): Book
     deleteBookById(id: ID!): Boolean
+    updateAuthor(id: ID!, author: AuthorInput!): Author
+
+}
+
+input AuthorInput{
+    name: String!
+    bookid: [ID!]!
 }
 
 input BookInput{

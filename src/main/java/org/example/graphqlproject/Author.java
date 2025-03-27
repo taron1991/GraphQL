@@ -19,8 +19,13 @@ public class Author {
     public Author() {
     }
 
-    public Author(String name) {
+    public Author(String name, List<Book> books) {
         this.name = name;
+        this.books = books;
+    }
+
+    public Author(String igor) {
+        this.name = igor;
     }
 
     public long getId() {
