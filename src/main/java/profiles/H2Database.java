@@ -14,6 +14,7 @@ public class H2Database {
 
     public static void main(String[] args) {
         try {
+            System.out.println("Starting H2 database example...");
             // 1. Загружаем драйвер H2 (не требуется с JDBC 4.0+, но лучше явно указать)
             Class.forName("org.h2.Driver");
 
